@@ -14,10 +14,10 @@ export default function Appointments(props) {
         interview={appointment.interview}
         interviewers={props.interviewers}
         bookInterview={props.bookInterview}
+        cancelInterview={props.cancelInterview}
       />
     );
   });
 
-  console.log(items);
   return items;
 }
