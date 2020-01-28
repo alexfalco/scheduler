@@ -12,9 +12,12 @@ export default function Appointments(props) {
         id={appointment.id}
         time={appointment.time}
         interview={appointment.interview}
+        interviewers={props.interviewers}
+        bookInterview={props.bookInterview}
       />
     );
   });
 
+  console.log(items);
   return items;
 }
