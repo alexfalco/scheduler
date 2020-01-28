@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "components/Appointment/style.scss";
 import Header from "components/Appointment/Header.jsx";
 import Show from "components/Appointment/Show.jsx";
@@ -8,6 +8,7 @@ import Error from "components/Appointment/Error.jsx";
 import Form from "components/Appointment/Form.jsx";
 import Empty from "components/Appointment/Empty.jsx";
 import useVisualMode from "hooks/useVisualMode";
+import axios from "axios";
 
 const classNames = require("classnames");
 
@@ -35,7 +36,6 @@ export default function Appointment(props) {
     transition("SAVING", false);
     props
       .bookInterview(props.id, interview)
-
       .then(() => transition("SHOW", false))
       .catch(err => transition("ERROR_SAVE", true));
   }
