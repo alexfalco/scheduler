@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React from "react"; //, { Fragment, useState }
 import "components/Appointment/style.scss";
 import Header from "components/Appointment/Header.jsx";
 import Show from "components/Appointment/Show.jsx";
@@ -8,9 +8,8 @@ import Error from "components/Appointment/Error.jsx";
 import Form from "components/Appointment/Form.jsx";
 import Empty from "components/Appointment/Empty.jsx";
 import useVisualMode from "hooks/useVisualMode";
-import axios from "axios";
 
-const classNames = require("classnames");
+//const classNames = require("classnames");
 
 export default function Appointment(props) {
   const EMPTY = "EMPTY";
