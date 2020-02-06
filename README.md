@@ -21,3 +21,8 @@ npm test
 ```sh
 npm run storybook
 ```
+
+
+
+![Appointment is booked] (https://github.com/alexfalco/scheduler/blob/master/src/docs/Add%20an%20Interview.png)
+![Confirm msg when deleting appointment] ()
