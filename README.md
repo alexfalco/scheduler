@@ -24,6 +24,6 @@ npm run storybook
 
 
 
-!["Appointment is booked"] (https://github.com/alexfalco/scheduler/blob/master/src/docs/Add%20an%20Interview.png)
+!["Appointment is booked"] (https://github.com/alexfalco/scheduler/blob/master/src/docs/Add%20an%20Interview.png?raw=true)
 
-!["Confirm msg when deleting appointment"] (https://github.com/alexfalco/scheduler/blob/master/src/docs/Delete%20an%20Interview.png)
+!["Confirm msg when deleting appointment"] ()
