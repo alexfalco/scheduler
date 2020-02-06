@@ -1,3 +1,4 @@
+// return an array of appointments for the selected day
 export function getAppointmentsForDay(state, day) {
   const filteredDay = state.days.filter(item => item.name === day);
   const appointments = filteredDay[0] ? filteredDay[0].appointments : [];
@@ -5,11 +6,10 @@ export function getAppointmentsForDay(state, day) {
     ? appointments.map(key => state.appointments[key])
     : [];
 
-  // return an array of appointments for the selected day
-
   return result;
 }
 
+// helper function to get interview for the day
 export function getInterview(state, interview) {
   // interviewers = Object of all interviewers
   // interview = interview id
@@ -24,35 +24,12 @@ export function getInterview(state, interview) {
   };
 }
 
-// export function getInterviewersForDay(state, day) {
-//   const filteredDay = state.days.filter(item => item.name === day);
-
-//   const appointmentsId = filteredDay[0] ? filteredDay[0].appointments : [];
-//   const appointments = appointmentsId
-//     ? appointmentsId.map(key => state.appointments[key])
-//     : [];
-
-//   const interviewerIds = appointments
-//     .map(appointment =>
-//       appointment.interview ? appointment.interview.interviewer : null
-//     )
-//     .filter(interviewer => interviewer);
-
-//   const interviewers = interviewerIds.map(id => state.interviewers[id]);
-
-//   return interviewers;
-// }
-
+// helper function to get the interviewer available for the day
 export function getInterviewersForDay(state, day) {
   const match = state.days.find(d => d.name === day);
-  //console.log(match);
+
   const interviewers = match ? match.interviewers : [];
-  //console.log(interviewers);
-  // console.log(
-  //   interviewers.map(id => {
-  //     return state.interviewers[id];
-  //   })
-  // );
+
   return interviewers.map(id => {
     return state.interviewers[id];
   });
